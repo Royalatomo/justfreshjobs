@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto+Slab:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  text-decoration: none;
+  background: none;
+
+  &:hover {
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+
+// Colors
+$primary-color : #00a5ec;
+
+$dark-white: #f5f5f5;
+$light-gray: #c7c7c7;
+$dark-gray: #484848;
+
+// Transitions
+$smooth-tran: all 0.2s linear;
+
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+}

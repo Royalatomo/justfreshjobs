@@ -1,0 +1,101 @@
+@import "../../../scss/defaults.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 2rem 4rem;
+  box-shadow: 0px 3px 6px $light-gray;
+}
+
+.navbar_logo .img {
+  width: 118px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.navbar_links {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark-gray;
+
+  margin-left: auto;
+  margin-right: 4rem;
+
+  &--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: $smooth-tran;
+    min-width: fit-content;
+
+    i {
+      font-weight: 900;
+      font-size: 27px;
+      margin-left: 5px;
+    }
+
+    &:hover {
+      background: lighten($primary-color, 47%);
+      color: $primary-color;
+    }
+
+    &.space {
+      padding: 0 10px;
+      margin: 0 10px;
+    }
+  }
+}
+
+.navbar_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: $smooth-tran;
+    font-size: 15px;
+  }
+  
+  .navbar_buttons--login {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    padding: 7px 20px;
+    margin-right: 2rem;
+    margin-right: 1rem;
+
+    &:hover {
+      background: $dark-white;
+    }
+  }
+
+  .navbar_buttons--register {
+    border: 2px solid $primary-color;
+    background: $primary-color;
+    color: white;
+    padding: 0px 15px 1px 20px;
+
+    i {
+      margin-left: 5px;
+      font-size: 30px;
+      transform: rotate(0deg);
+      position: relative;
+      transition: transform 0.4s linear;
+    }
+
+    &:hover i {
+      transform: rotate(-180deg);
+      top: -2px;
+    }
+  }
+}

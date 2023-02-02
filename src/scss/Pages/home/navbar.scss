@@ -1,19 +1,99 @@
 @import "../../../scss/defaults.scss";
 
-.navbar {
+.holder {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  padding: 2rem 4rem;
-  box-shadow: 0px 3px 6px $light-gray;
+  padding: 2rem 1rem;
+
+  @media screen and (max-width: 980px) {
+    padding: 1rem;
+  }
 }
 
-.navbar_logo .img {
-  width: 118px;
-  height: 42px;
-  object-fit: contain;
+.navbar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.navbar_links {
+.navbar__hamburger {
+  font-size: 33px;
+  display: none;
+  margin-right: 2rem;
+  color: $dark-gray;
+
+  .black-screen {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: $smooth-tran;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 17px;
+    width: fit-content;
+    max-width: 90%;
+    height: 100%;
+    z-index: 3;
+    background: white;
+    padding: 2rem 0;
+    transform: translateX(-100%);
+    transition: $smooth-tran;
+
+    &--link {
+      padding: 0.5rem 2rem;
+      min-width: max-content;
+    }
+
+    hr {
+      margin: 0.8rem 0;
+      border-top: 1px solid $light-gray;
+    }
+  }
+
+  &.active {
+    .black-screen {
+      z-index: 2;
+      background: rgba(72, 72, 72, 0.5);
+    }
+
+    .navbar__hamburger__menu {
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 300px) {
+    &__menu--link {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+}
+
+.navbar__logo {
+  .img {
+    width: 118px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 410px) {
+    margin: 0 auto;
+  }
+}
+
+.navbar__links {
   list-style: none;
   display: flex;
   text-align: center;
@@ -49,9 +129,13 @@
       margin: 0 10px;
     }
   }
+
+  @media screen and (max-width: 980px) {
+    display: none;
+  }
 }
 
-.navbar_buttons {
+.navbar__buttons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,8 +150,8 @@
     transition: $smooth-tran;
     font-size: 15px;
   }
-  
-  .navbar_buttons--login {
+
+  .navbar__buttons--login {
     border: 2px solid $primary-color;
     color: $primary-color;
     padding: 7px 20px;
@@ -79,7 +163,7 @@
     }
   }
 
-  .navbar_buttons--register {
+  .navbar__buttons--register {
     border: 2px solid $primary-color;
     background: $primary-color;
     color: white;
@@ -90,12 +174,28 @@
       font-size: 30px;
       transform: rotate(0deg);
       position: relative;
-      transition: transform 0.4s linear;
+      transition: transform 0.2s linear;
     }
 
     &:hover i {
       transform: rotate(-180deg);
       top: -2px;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    margin-left: auto;
+  }
+
+  @media screen and (max-width: 530px) {
+    .navbar__buttons--login {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .navbar__buttons--register {
+      display: none;
     }
   }
 }

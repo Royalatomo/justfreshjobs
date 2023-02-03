@@ -2,7 +2,9 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; }
 
 a {
   text-decoration: none; }
@@ -16,7 +18,7 @@ button {
     cursor: pointer; }
 
 body {
-  font-family: 'Poppins', 'Roboto', sans-serif; }
+  font-family: "Poppins", "Roboto", sans-serif; }
 
 .holder {
   max-width: 1200px;
@@ -100,19 +102,20 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 0 15px;
+    padding: 6px 15px;
     transition: all 0.2s linear;
-    min-width: fit-content; }
+    min-width: fit-content;
+    margin: 0 10px; }
     .navbar__links--link i {
       font-weight: 900;
       font-size: 27px;
-      margin-left: 5px; }
+      margin-left: 5px;
+      transition: transform 0.2s linear; }
     .navbar__links--link:hover {
       background: #ddf5ff;
       color: #00a5ec; }
     .navbar__links--link.space {
-      padding: 0 10px;
-      margin: 0 10px; }
+      padding: 0 10px; }
   @media screen and (max-width: 980px) {
     .navbar__links {
       display: none; } }
@@ -142,16 +145,42 @@ body {
     border: 2px solid #00a5ec;
     background: #00a5ec;
     color: white;
-    padding: 0px 15px 1px 20px; }
+    padding: 0px 15px 1px 20px;
+    position: relative; }
     .navbar__buttons .navbar__buttons--register i {
       margin-left: 5px;
       font-size: 30px;
       transform: rotate(0deg);
       position: relative;
       transition: transform 0.2s linear; }
+    .navbar__buttons .navbar__buttons--register-menu {
+      background: white;
+      opacity: 0;
+      position: absolute;
+      bottom: calc(-100% + -4rem);
+      color: #484848;
+      text-align: left;
+      left: 0px;
+      box-shadow: 0px 0px 4px grey;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      min-width: 100%;
+      font-size: 14px;
+      font-family: "Poppins";
+      font-weight: 100;
+      z-index: -2;
+      transition: all 0.2s linear; }
+    .navbar__buttons .navbar__buttons--register-option {
+      padding: 10px 15px;
+      min-width: max-content; }
+      .navbar__buttons .navbar__buttons--register-option:hover {
+        background: #ddf5ff;
+        color: #00a5ec; }
     .navbar__buttons .navbar__buttons--register:hover i {
       transform: rotate(-180deg);
       top: -2px; }
+    .navbar__buttons .navbar__buttons--register:hover .navbar__buttons--register-menu {
+      z-index: 2;
+      opacity: 1; }
   @media screen and (max-width: 980px) {
     .navbar__buttons {
       margin-left: auto; } }

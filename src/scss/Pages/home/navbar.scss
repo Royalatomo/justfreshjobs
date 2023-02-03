@@ -109,14 +109,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 0 15px;
+    padding: 6px 15px;
     transition: $smooth-tran;
     min-width: fit-content;
+    margin: 0 10px;
 
     i {
       font-weight: 900;
       font-size: 27px;
       margin-left: 5px;
+      transition: transform 0.2s linear;
     }
 
     &:hover {
@@ -126,7 +128,6 @@
 
     &.space {
       padding: 0 10px;
-      margin: 0 10px;
     }
   }
 
@@ -168,6 +169,7 @@
     background: $primary-color;
     color: white;
     padding: 0px 15px 1px 20px;
+    position: relative;
 
     i {
       margin-left: 5px;
@@ -177,10 +179,46 @@
       transition: transform 0.2s linear;
     }
 
-    &:hover i {
-      transform: rotate(-180deg);
-      top: -2px;
+    &-menu {
+      background: white;
+      opacity: 0;
+      position: absolute;
+      bottom: calc(-100% + -4rem) ;
+      color: $dark-gray;
+      text-align: left;
+      left: 0px;
+      box-shadow: 0px 0px 4px grey;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      min-width: 100%;
+      font-size: 14px;
+      font-family: "Poppins";
+      font-weight: 100;
+      z-index: -2;
+      transition: $smooth-tran;
     }
+
+    &-option {
+      padding: 10px 15px;
+      min-width: max-content;
+
+      &:hover {
+        background: lighten($primary-color, 47%);
+        color: $primary-color;
+      }
+    }
+
+    &:hover{
+      i {
+        transform: rotate(-180deg);
+        top: -2px;
+      }
+
+      .navbar__buttons--register-menu {
+        z-index: 2;
+        opacity: 1;
+      }
+    }
+
   }
 
   @media screen and (max-width: 980px) {

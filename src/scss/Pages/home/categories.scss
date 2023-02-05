@@ -85,10 +85,12 @@
     padding: 20px 10px;
     min-width: 155px;
     cursor: pointer;
+    text-align: center !important;
 
     img {
       object-fit: contain;
-      margin-bottom: 10px;
+      width: 64px !important;
+      margin: 15px auto;
     }
 
     &:hover {

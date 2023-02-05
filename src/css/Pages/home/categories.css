@@ -88,10 +88,12 @@ body {
     color: #1b2437;
     padding: 20px 10px;
     min-width: 155px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-align: center !important; }
     .container__categories--option img {
       object-fit: contain;
-      margin-bottom: 10px; }
+      width: 64px !important;
+      margin: 15px auto; }
     .container__categories--option:hover {
       background: rgba(199, 199, 199, 0.2); }
   @media screen and (max-width: 370px) {

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../css/Pages/home/navbar.css";
+import "../css/Pages/home/navbar.css";
 
 // section (A) page links - about site
 const hamburger_pages = [

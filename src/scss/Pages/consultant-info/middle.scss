@@ -1,0 +1,256 @@
+@import "../../defaults.scss";
+
+.middle__banner {
+  display: flex;
+  background: lighten($dark-brown, 30%);
+  height: 60vh;
+  overflow: hidden;
+  margin-bottom: 3rem;
+
+  &__img--img {
+    opacity: 0.7;
+    height: 60vh;
+    max-width: 60vw;
+    object-fit: contain;
+  }
+
+  &__info {
+    margin: auto 3rem;
+
+    &--heading {
+      font-size: 40px;
+      word-spacing: 5px;
+      word-break: break-word;
+
+      span {
+        color: darken($primary-color, 20%);
+        text-shadow: 1px 1px 4px $secondary-color;
+      }
+    }
+
+    &--sub-heading {
+      font-size: 22px;
+      margin-top: 2rem;
+      word-spacing: 3px;
+
+      span {
+        font-weight: bold;
+        color: $pink;
+        text-shadow: 1px 1px 4px $secondary-color;
+      }
+    }
+
+    &--register {
+      margin-top: 3rem;
+      font-size: 25px;
+      background: darken($primary-color, 20%);
+      font-weight: bold;
+      color: $secondary-color;
+      padding: 10px 21px;
+      border-radius: 8px;
+      box-shadow: 4px 4px 5px $secondary-color;
+      transform: translateY(-5px);
+      transition: $smooth-tran;
+
+      &:hover {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    &__img--img {
+      width: 40vw;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    height: fit-content;
+    background: lighten($dark-brown, 30%);
+
+    &__img--img {
+      display: none;
+    }
+
+    .middle__banner__info {
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 365px) {
+    padding: 2rem 1rem;
+
+    .middle__banner__info {
+      &--heading {
+        font-size: 30px;
+      }
+
+      &--sub-heading {
+        font-size: 18px;
+      }
+
+      &--register {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.middle__details {
+  margin: 0 2rem;
+
+  &--heading {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  &--description {
+    font-weight: 500;
+    color: $dark-gray;
+    font-size: 18px;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.5;
+  }
+
+  &__container {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    margin: 6rem 2rem;
+    justify-content: space-between;
+
+    &--holder {
+      margin: 0 3rem;
+
+      img {
+        max-width: 40vw;
+        max-height: 300px;
+        background: $dark-white;
+        padding: 2rem;
+        border-radius: 15px;
+        object-fit: contain;
+      }
+
+      h4 {
+        font-size: 22px;
+        margin-bottom: 2rem;
+        background: darken($dark-white, 20%);
+        width: fit-content;
+        padding: 5px 15px;
+        position: relative;
+        left: -15px;
+      }
+
+      p {
+        font-size: 20px;
+        max-width: 700px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    &__container {
+      box-shadow: 0px 0px 4px $dark-blue;
+      flex-direction: column;
+      background: $dark-white;
+      width: fit-content;
+      margin: 5rem auto;
+      padding: 2rem 3rem;
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+
+      &--holder {
+        margin: 0;
+      }
+
+      h4 {
+        position: relative;
+        left: 0px;
+      }
+
+      &--holder.img {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    &__container {
+      p {
+        font-size: 18px;
+      }
+
+      img {
+        width: 300px;
+        height: 210px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__container {
+      padding: 0 6rem;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    &__container {
+
+      p {
+        font-size: 16px;
+        margin: 0 1rem;
+      }
+
+      h4 {
+        font-size: 20px;
+        width: 100%;
+        padding: 12px 15px;
+      }
+
+      padding: 0;
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    &--heading {
+      font-size: 30px;
+    }
+
+    &--description {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    &__container {
+      p {
+        font-size: 14px;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    &--heading {
+      font-size: 25px;
+    }
+
+    &--description {
+      font-size: 14px;
+    }
+
+    margin: 0 1rem;
+  }
+}

@@ -121,7 +121,7 @@
       transition: transform 0.2s linear;
     }
 
-    &:hover {
+    &:hover, &.active {
       background: lighten($primary-color, 47%);
       color: $primary-color;
     }

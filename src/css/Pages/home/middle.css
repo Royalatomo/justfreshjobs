@@ -27,6 +27,9 @@ button {
     outline: none;
     cursor: pointer; }
 
+h1 {
+  font-family: "Source Serif Pro", serif; }
+
 body {
   font-family: "Poppins", "Roboto", sans-serif; }
 
@@ -52,6 +55,9 @@ button {
   button:hover {
     outline: none;
     cursor: pointer; }
+
+h1 {
+  font-family: "Source Serif Pro", serif; }
 
 body {
   font-family: "Poppins", "Roboto", sans-serif; }

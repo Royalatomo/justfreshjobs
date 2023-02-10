@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../css/Pages/home/navbar.css";
+import "../css/Pages/navbar.css";
 
 // section (A) page links - about site
 const hamburger_pages = [
@@ -22,7 +22,7 @@ const register_options = [
   { name: "As a consultant", link: "" }
 ]
 
-function Navbar() {
+function Navbar({activate=""}) {
 
   useEffect(() => {
     const hamburger = document.querySelector(".navbar__hamburger i");
@@ -58,10 +58,10 @@ function Navbar() {
         </span>
 
         <span className="navbar__links">
-          <li to="/" className="navbar__links--link">Jobs</li>
-          <li to="/" className="navbar__links--link space">Internships</li>
-          <li to="/" className="navbar__links--link">Consultants</li>
-          <li to="/" className="navbar__links--link">Contact Us</li>
+          <li to="/" className={"navbar__links--link " + (activate==="jobs"?"active":"")}>Jobs</li>
+          <li to="/" className={"navbar__links--link space " + (activate==="internships"?"active":"")}>Internships</li>
+          <li to="/" className={"navbar__links--link " + (activate==="consultants"?"active":"")}>Consultants</li>
+          <li to="/" className={"navbar__links--link " + (activate==="contact"?"active":"")}>Contact Us</li>
         </span>
 
         <span className="navbar__buttons">

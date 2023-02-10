@@ -35,13 +35,18 @@ button {
 
 // Colors
 $primary-color: #00a5ec;
+$secondary-color: #fff;
 
 $dark-white: #f5f5f5;
+$pink: #e91e63;
+
 $light-gray: #c7c7c7;
 $dark-gray: #484848;
 
 $light-blue: #8292b4;
 $dark-blue: #1b2437;
+
+$dark-brown: #83554485;
 
 // Transitions
 $smooth-tran: all 0.2s linear;
@@ -50,6 +55,10 @@ $smooth-tran: all 0.2s linear;
 $text-font: "Poppins", "Roboto", sans-serif;
 $heading-font: "Source Serif Pro", serif;
 $subheading-font: 'Inter', sans-serif;
+
+h1{
+  font-family: $heading-font;
+}
 
 body {
   font-family: $text-font;

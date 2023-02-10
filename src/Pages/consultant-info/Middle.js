@@ -1,10 +1,10 @@
 import React from "react";
 import "../../css/Pages/consultant-info/middle.css";
 
-function DetailsContainer({ position="right", heading, desc, img, icon }) {
+function DetailsContainer({ position="right", heading, desc, img }) {
   let information = (
     <div className="middle__details__container--holder text">
-      <h4><i className={icon}></i> {heading}</h4>
+      <h4>{heading}</h4>
       <p>{desc}</p>
     </div>
   );
@@ -51,10 +51,10 @@ function Middle() {
           deleniti laborum unde quisquam?
         </h2>
 
-        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} icon={'uil uil-rupee-sign'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/connect.svg'} position="left" />
-        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} icon={'uil uil-lock'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/growth.svg'} />
-        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} icon={'uil uil-rocket'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/save_money.svg'} position="left" />
-        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} icon={'uil uil-heart'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/wide_options.svg'} />
+        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/connect.svg'} position="left" />
+        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/growth.svg'} />
+        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/save_money.svg'} position="left" />
+        <DetailsContainer heading={'Lorem ipsum dolor sit amet'} desc={"Lorem ipsum dolor sit, amet consectetur adipisicing elit.Praesentium voluptatibus fuga distinctio laborum autem totam blanditiis animi esse. Sunt temporibus aliquam nam quod quasi fugiat autem ea cum tempore nesciunt."} img={'/assets/wide_options.svg'} />
       </div>
     </section>
   );

@@ -1,0 +1,56 @@
+@import "../../defaults.scss";
+
+.companies-carousel {
+  * {
+    outline: none !important;
+  }
+
+  padding: 3rem 2rem;
+
+  &--heading {
+    text-align: center;
+    font-size: 40px;
+    color: $dark-blue;
+  }
+
+  &--description {
+    text-align: center;
+    margin: 0.5rem 0 3rem;
+    font-size: 18px;
+    color: $dark-gray;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 600px) {
+    &--heading {
+      font-size: 35px;
+    }
+
+    &--description {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    &--heading {
+      font-size: 30px;
+    }
+
+    &--description {
+      font-size: 16px;
+    }
+  }
+}
+
+.slick-slide img  {
+  margin: 0 2rem;
+  width: 200px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+

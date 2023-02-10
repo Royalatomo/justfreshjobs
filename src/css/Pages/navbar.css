@@ -30,6 +30,19 @@ h1 {
 body {
   font-family: "Poppins", "Roboto", sans-serif; }
 
+.green {
+  color: #009700; }
+
+.red {
+  color: #cf0300; }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: white; }
+
 .navbar .holder {
   max-width: 1200px;
   margin: 0 auto;

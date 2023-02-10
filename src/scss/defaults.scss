@@ -46,6 +46,9 @@ $dark-gray: #484848;
 $light-blue: #8292b4;
 $dark-blue: #1b2437;
 
+$light-green: #00f614;
+$dark-green: #005951;
+
 $dark-brown: #83554485;
 
 // Transitions
@@ -62,4 +65,11 @@ h1{
 
 body {
   font-family: $text-font;
+}
+
+.green {
+  color: #009700;
+}
+.red {
+  color: #cf0300;
 }

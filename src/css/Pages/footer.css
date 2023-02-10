@@ -30,6 +30,12 @@ h1 {
 body {
   font-family: "Poppins", "Roboto", sans-serif; }
 
+.green {
+  color: #009700; }
+
+.red {
+  color: #cf0300; }
+
 .footer {
   background: #1b2437;
   color: white;

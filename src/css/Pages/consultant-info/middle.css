@@ -30,6 +30,12 @@ h1 {
 body {
   font-family: "Poppins", "Roboto", sans-serif; }
 
+.green {
+  color: #009700; }
+
+.red {
+  color: #cf0300; }
+
 .middle__banner {
   display: flex;
   background: rgba(201, 164, 151, 0.521569);
@@ -66,7 +72,7 @@ body {
       color: #fff;
       padding: 10px 21px;
       border-radius: 8px;
-      box-shadow: 4px 4px 5px #fff;
+      box-shadow: 4px 4px 5px rgba(0, 94, 134, 0.5);
       transform: translateY(-5px);
       transition: all 0.2s linear; }
       .middle__banner__info--register:hover {
@@ -100,8 +106,10 @@ body {
 .middle__details {
   margin: 0 2rem; }
   .middle__details--heading {
-    font-size: 35px;
-    text-align: center; }
+    font-family: 'unicons-line';
+    font-size: 40px;
+    text-align: center;
+    color: #1b2437; }
   .middle__details--description {
     font-weight: 500;
     color: #484848;
@@ -165,6 +173,7 @@ body {
       padding: 0 6rem; } }
   @media screen and (max-width: 560px) {
     .middle__details__container {
+      margin: 3rem 0;
       padding: 0;
       padding-bottom: 2rem; }
       .middle__details__container p {
@@ -173,7 +182,7 @@ body {
       .middle__details__container h4 {
         font-size: 20px;
         width: 100%;
-        padding: 12px 15px; } }
+        padding: 20px 15px; } }
   @media screen and (max-width: 470px) {
     .middle__details--heading {
       font-size: 30px; }

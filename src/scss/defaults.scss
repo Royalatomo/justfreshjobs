@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto+Slab:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -40,8 +40,12 @@ $secondary-color: #fff;
 $dark-white: #f5f5f5;
 $pink: #e91e63;
 
+$red: #cf0300;
+
 $light-gray: #c7c7c7;
 $dark-gray: #484848;
+
+$purple: #c5d6f4;
 
 $light-blue: #8292b4;
 $dark-blue: #1b2437;
@@ -57,9 +61,9 @@ $smooth-tran: all 0.2s linear;
 // Front-family
 $text-font: "Poppins", "Roboto", sans-serif;
 $heading-font: "Source Serif Pro", serif;
-$subheading-font: 'Inter', sans-serif;
+$subheading-font: "Inter", sans-serif;
 
-h1{
+h1 {
   font-family: $heading-font;
 }
 
@@ -68,8 +72,63 @@ body {
 }
 
 .green {
-  color: #009700;
+  color: darken($light-green, 5%);
 }
 .red {
-  color: #cf0300;
+  color: $red;
+}
+
+.font-heading {
+  font-size: 40px;
+  margin: 2rem 1rem 3rem;
+  text-align: center;
+  color: $dark-green;
+  text-shadow: 2px 2px 6px $light-gray;
+
+  @media screen and (max-width: 470px) {
+    margin-bottom: 2rem;
+    font-size: 35px;
+  }
+}
+
+ul.font-text {
+  margin: 1rem 5rem;
+  line-height: 1.6;
+
+  @media screen and (max-width: 470px) {
+    font-size: 16px;
+    margin: 1rem 3rem;
+  }
+}
+
+.font-text {
+  font-size: 18px;
+  margin: 1rem 3rem;
+  font-weight: 500;
+  color: $dark-gray;
+  line-height: 24px;
+
+  @media screen and (max-width: 470px) {
+    font-size: 16px;
+    margin: 1rem;
+  }
+}
+
+.font-subheading {
+  margin: 2rem 3rem 1rem;
+  color: $dark-blue;
+  font-size: 25px;
+
+  @media screen and (max-width: 470px) {
+    font-size: 20px;
+    margin: 2rem 1rem 1rem;
+  }
+}
+
+.margin-btm {
+  margin-bottom: 3rem;
+}
+
+li {
+  text-align: -webkit-match-parent;
 }

@@ -31,10 +31,55 @@ body {
   font-family: "Poppins", "Roboto", sans-serif; }
 
 .green {
-  color: #009700; }
+  color: #00dd12; }
 
 .red {
   color: #cf0300; }
+
+.font-heading {
+  font-size: 40px;
+  margin: 2rem 1rem 3rem;
+  text-align: center;
+  color: #005951;
+  text-shadow: 2px 2px 6px #c7c7c7; }
+  @media screen and (max-width: 470px) {
+    .font-heading {
+      margin-bottom: 2rem;
+      font-size: 35px; } }
+
+ul.font-text {
+  margin: 1rem 5rem;
+  line-height: 1.6; }
+  @media screen and (max-width: 470px) {
+    ul.font-text {
+      font-size: 16px;
+      margin: 1rem 3rem; } }
+
+.font-text {
+  font-size: 18px;
+  margin: 1rem 3rem;
+  font-weight: 500;
+  color: #484848;
+  line-height: 24px; }
+  @media screen and (max-width: 470px) {
+    .font-text {
+      font-size: 16px;
+      margin: 1rem; } }
+
+.font-subheading {
+  margin: 2rem 3rem 1rem;
+  color: #1b2437;
+  font-size: 25px; }
+  @media screen and (max-width: 470px) {
+    .font-subheading {
+      font-size: 20px;
+      margin: 2rem 1rem 1rem; } }
+
+.margin-btm {
+  margin-bottom: 3rem; }
+
+li {
+  text-align: -webkit-match-parent; }
 
 .navbar {
   position: sticky;

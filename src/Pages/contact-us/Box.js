@@ -104,8 +104,7 @@ function Box() {
 
   return (
     <section className="contact">
-      <Message toggle={toggleSubmit} />
-      {/* {(!submited)?<BoxContent toggle={toggleSubmit} />:<Message toggle={toggleSubmit} />} */}
+      {(!submited)?<BoxContent toggle={toggleSubmit} />:<Message toggle={toggleSubmit} />}
       <div className="contact__img">
         <img src="/assets/contact_us.jpg" alt="" />
       </div>

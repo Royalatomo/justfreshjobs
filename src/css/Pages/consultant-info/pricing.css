@@ -194,7 +194,8 @@ li {
     .pricing__body__box--foot .information {
       color: #484848;
       font-size: 15px;
-      font-weight: 500; }
+      font-weight: 500;
+      margin-left: 1rem; }
       .pricing__body__box--foot .information--warning {
         margin-bottom: 10px; }
   @media screen and (max-width: 480px) {

@@ -32,9 +32,9 @@ function PriceBox({heading, description, items, price, head_icon, informations }
 
       <div className="pricing__body__box--foot">
         <button className="submit">Buy Now</button>
-        <div className="information">
+        <ul className="information">
           {informations.map((info, index) => <li key={index} className="information--warning">{info}</li>)}
-        </div>
+        </ul>
       </div>
     </div>
   );

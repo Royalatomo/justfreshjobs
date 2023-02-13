@@ -1,0 +1,2 @@
+export const CAT_FILTERS = ["Scientist", "Artist", "Musician", "Cyber Security", "Programmer", "Web Developer"]
+export const LOC_FILTERS = ["Delhi", "Mumbai", "Jammu", "Kashmir", "Uttrakhand", "Telengana"]

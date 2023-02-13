@@ -5,11 +5,13 @@ import Middle from './Middle'
 
 function Home() {
   return (
-    <div className="home-container">
+    <>
       <Navbar />
-      <Middle />
+        <div className="home-container">
+          <Middle />
+        </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

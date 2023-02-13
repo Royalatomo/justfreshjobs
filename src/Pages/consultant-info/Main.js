@@ -1,20 +1,22 @@
-import React from 'react'
-import Navbar from '../Navbar'
-import Footer from '../Footer'
-import Middle from './Middle'
-import Pricing from './Pricing'
-import Companies from './Companies'
+import React from "react";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import Middle from "./Middle";
+import Pricing from "./Pricing";
+import Companies from "./Companies";
 
 function Main() {
   return (
-    <div className="consultant-container">
-      <Navbar activate='consultants' />
-      <Middle />
-      <Pricing />
-      <Companies />
+    <>
+      <Navbar activate="consultants" />
+      <div className="consultant-container">
+        <Middle />
+        <Pricing />
+        <Companies />
+      </div>
       <Footer />
-    </div>
-  )
+    </>
+  );
 }
 
-export default Main
+export default Main;

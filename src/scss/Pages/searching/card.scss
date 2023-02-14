@@ -1,0 +1,148 @@
+@import "../../defaults.scss";
+
+.card {
+  background: $secondary-color;
+  padding: 2rem;
+  box-shadow: 0 0 3px lighten($dark-gray, 20%);
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  transition: $smooth-tran;
+
+  &:hover {
+    box-shadow: 0 0 5px lighten($dark-gray, 10%);
+  }
+}
+
+.card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info-banner {
+    background: $secondary-color;
+    width: fit-content;
+    padding: 0px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 19px;
+      margin-right: 10px;
+      color: $primary-color;
+    }
+  }
+
+  &--save {
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: &smooth-tran;
+    cursor: pointer;
+
+    i {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background: $dark-white;
+    }
+  }
+}
+
+.card__company-info {
+  display: flex;
+  justify-content: space-between;
+
+  &__text--post {
+    font-size: 18px;
+    font-weight: 600;
+    color: $dark-blue;
+  }
+
+  &__text--comp-name {
+    font-weight: 500;
+    color: lighten($dark-gray, 20%);
+    margin-top: 0.4rem;
+  }
+
+  &__logo img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.card__job-info {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.5;
+
+  &__item {
+    min-width: max-content;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: $dark-blue;
+
+    i {
+      margin-right: 0.4rem;
+    }
+  }
+}
+
+.card__tags {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: darken($light-gray, 20%);
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 43rem;
+    margin: 0 0.5rem;
+    background: darken($light-gray, 20%);
+  }
+}
+
+.card__foot {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: $dark-gray;
+
+  .foot-btn {
+    border: 2px solid $secondary-color;
+    padding: 8px 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: $smooth-tran;
+    cursor: pointer;
+  }
+
+  &__buttons {
+    display: flex;
+
+    &--detail {
+      border-color: $secondary-color;
+      margin-right: 2rem;
+      color: $primary-color;
+
+      &:hover {
+        background-color: $dark-white;
+      }
+    }
+
+    &--apply {
+      border-color: $primary-color;
+      color: $secondary-color;
+      background-color: $primary-color;
+    }
+  }
+}

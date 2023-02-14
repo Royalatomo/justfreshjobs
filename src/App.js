@@ -9,12 +9,12 @@ import Searching from "./Pages/searching/Main";
 function App() {
   return (
     <div className="App">
-      {/* <Home /> */}
+      <Home />
       {/* <Consultants_Info /> */}
       {/* <Contact_Us /> */}
       {/* <Privacy /> */}
       {/* <TermsCondition /> */}
-      <Searching />
+      {/* <Searching /> */}
     </div>
   );
 }

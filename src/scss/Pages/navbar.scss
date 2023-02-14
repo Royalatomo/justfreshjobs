@@ -37,6 +37,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: none;
     transition: $smooth-tran;
   }
 
@@ -70,6 +71,7 @@
   &.active {
     .black-screen {
       z-index: 10;
+      display: block;
       background: rgba(72, 72, 72, 0.5);
     }
 

@@ -113,6 +113,7 @@ li {
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: none;
     transition: all 0.2s linear; }
   .navbar__hamburger__menu {
     position: absolute;
@@ -137,6 +138,7 @@ li {
       border-top: 1px solid #c7c7c7; }
   .navbar__hamburger.active .black-screen {
     z-index: 10;
+    display: block;
     background: rgba(72, 72, 72, 0.5); }
   .navbar__hamburger.active .navbar__hamburger__menu {
     transform: translateX(0); }

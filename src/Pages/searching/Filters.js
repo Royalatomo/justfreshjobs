@@ -71,6 +71,16 @@ function Filters() {
       }
     }
 
+    if (allFields.length === 1) {
+      input.classList.add('initial');
+
+      if (input.classList.contains('category')) {
+        input.placeholder = 'eg: Marketing'
+      }else {
+        input.placeholder = 'eg: Delhi'
+      }
+    }
+
     choiceFields.remove();
   }
 
@@ -122,7 +132,7 @@ function Filters() {
         <ul className="filters__choice__box">
 
           {categories.map((cat, id)=> <li key={id} className="filters__choice__box--field">{cat} <i onClick={removeChoice} className="uil uil-multiply"></i></li>)}
-          <input type="text" className="filters__choice__box--search initial" placeholder="eg: Marketing" />
+          <input type="text" className="filters__choice__box--search category initial" placeholder="eg: Marketing" />
           <ChoiceSelection choices={CAT_FILTERS} addToList={addCat} />
         </ul>
       </div>
@@ -131,7 +141,7 @@ function Filters() {
         <p className="filters__choice--heading">Location</p>
         <ul className="filters__choice__box">
           {location.map((loc, id)=> <li key={id} className="filters__choice__box--field">{loc} <i onClick={removeChoice} className="uil uil-multiply"></i></li>)}
-          <input type="text" className="filters__choice__box--search initial" placeholder="eg: Delhi" />
+          <input type="text" className="filters__choice__box--search location initial" placeholder="eg: Delhi" />
           <ChoiceSelection choices={LOC_FILTERS} addToList={addLoc} />
         </ul>
 

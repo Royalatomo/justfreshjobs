@@ -82,6 +82,93 @@ a {
   text-decoration: none;
   color: #484848; }
 
+.container-area {
+  min-height: 80vh;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 550px;
+  padding: 0 1rem; }
+  .container-area .area--heading {
+    font-family: "Poppins";
+    font-size: 40px;
+    margin-top: 4rem;
+    color: #004a85;
+    word-spacing: 7px;
+    text-align: center; }
+  .container-area .area--description {
+    font-size: 17px;
+    margin-top: 1rem;
+    color: #343434;
+    font-weight: 500;
+    text-align: center; }
+  .container-area .fields-container {
+    box-shadow: -2px -2px 6px rgba(0, 107, 194, 0.12), 2px 2px 6px rgba(0, 107, 194, 0.12);
+    margin-top: 3rem;
+    padding: 2rem;
+    margin-bottom: 4rem; }
+    .container-area .fields-container img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover; }
+    .container-area .fields-container .success-msg--notification {
+      font-size: 21px;
+      color: green;
+      margin-top: 1rem;
+      text-align: center; }
+    .container-area .fields-container--field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem; }
+      .container-area .fields-container--field label {
+        font-weight: 500;
+        font-size: 18px; }
+      .container-area .fields-container--field input {
+        font-size: 20px;
+        margin-top: 10px;
+        border: 1px solid #c7c7c7;
+        padding: 10px 15px; }
+    .container-area .fields-container--btn {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      width: 100%;
+      border-radius: 7px; }
+      .container-area .fields-container--btn.fill {
+        font-size: 20px;
+        background: #2196f3;
+        padding: 10px 0;
+        font-weight: 600;
+        color: white; }
+      .container-area .fields-container--btn .link-text {
+        font-weight: 500;
+        color: #00a5ec;
+        text-decoration: underline; }
+    .container-area .fields-container--error {
+      color: red;
+      font-weight: 500;
+      display: none; }
+      .container-area .fields-container--error.active {
+        display: block; }
+  @media screen and (max-width: 620px) {
+    .container-area .area--heading {
+      font-size: 26px; }
+    .container-area .area--description {
+      font-size: 16px; }
+    .container-area .fields-container {
+      padding: 1rem 0;
+      box-shadow: none;
+      margin-top: 2rem; }
+      .container-area .fields-container img {
+        height: 200px; } }
+  @media screen and (max-width: 380px) {
+    .container-area .area--heading {
+      font-size: 20px; }
+    .container-area .fields-container {
+      margin-top: 1.5rem; }
+      .container-area .fields-container img {
+        height: 170px; } }
+
 .navbar {
   position: sticky;
   top: 0;

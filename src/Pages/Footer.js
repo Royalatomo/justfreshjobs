@@ -1,40 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "../css/Pages/footer.css";
 
 function Footer() {
+
+  useEffect(() => {
+    const links = document.querySelectorAll('.footer__pagelink--link');
+    links.forEach((link) => link.addEventListener('click', () => window.scrollTo(0, 0)));
+  }, [])
+
   return (
     <footer className="footer">
       <div className="footer__pagelink">
         <div className="holder">
-          <li className="footer__pagelink--link">About us</li>
-          <li className="footer__pagelink--link">Contact us</li>
+          <Link to="/" className="footer__pagelink--link">About us</Link>
+          <Link to="/contact-us" className="footer__pagelink--link">Contact us</Link>
         </div>
 
         <div className="holder">
-          <li className="footer__pagelink--link">Our Services</li>
-          <li className="footer__pagelink--link">Terms & Conditions</li>
+          <Link to="/" className="footer__pagelink--link">Our Services</Link>
+          <Link to='/terms-conditions' className="footer__pagelink--link">Terms & Conditions</Link>
         </div>
 
         <div className="holder">
-          <li className="footer__pagelink--link">Privacy</li>
-          <li className="footer__pagelink--link">Consultants</li>
+          <Link to="/privacy" className="footer__pagelink--link">Privacy</Link>
+          <Link to="/consultant" className="footer__pagelink--link">Consultants</Link>
         </div>
       </div>
 
       <div className="footer__socials">
         <div className="holder">
-          <li className="footer__socials--link">
+          <a href="https://instagram.com" target="__blank" className="footer__socials--link">
             <i className="uil uil-instagram"></i>
-          </li>
-          <li className="footer__socials--link">
+          </a>
+          <a href="https://instagram.com" target="__blank" className="footer__socials--link">
             <i className="uil uil-twitter"></i>
-          </li>
-          <li className="footer__socials--link">
+          </a>
+          <a href="https://instagram.com" target="__blank" className="footer__socials--link">
             <i className="uil uil-youtube"></i>
-          </li>
-          <li className="footer__socials--link">
+          </a>
+          <a href="https://instagram.com" target="__blank" className="footer__socials--link">
             <i className="uil uil-linkedin-alt"></i>
-          </li>
+          </a>
         </div>
 
         <div className="holder">

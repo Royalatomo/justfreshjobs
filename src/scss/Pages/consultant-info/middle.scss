@@ -41,6 +41,8 @@
     }
 
     &--register {
+      display: block;
+      width: fit-content;
       margin-top: 3rem;
       font-size: 25px;
       background: darken($primary-color, 20%);

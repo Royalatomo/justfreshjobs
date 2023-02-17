@@ -62,7 +62,9 @@ function Navbar() {
         </span>
 
         <span className="navbar__logo">
-          <img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="Logo" />
+          <Link to="/">
+            <img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="Logo" /> 
+          </Link>
         </span>
 
         <span className="navbar__links">
@@ -73,13 +75,13 @@ function Navbar() {
         </span>
 
         <span className="navbar__buttons">
-          <button className="navbar__buttons--login">Login</button>
+          <Link to="/login" className="navbar__buttons--login">Login</Link>
           <button className="navbar__buttons--register">
             <span>Register</span>
             <i className="uil uil-angle-down"></i>
             <div className="navbar__buttons--register-menu">
               {register_options.map((option, i) => {
-                return <div key={i} className="navbar__buttons--register-option">{option.name}</div>
+                return <Link key={i} to={option.link} className="navbar__buttons--register-option">{option.name}</Link>
               })}
             </div>
           </button>

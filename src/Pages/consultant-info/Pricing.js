@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../css/Pages/consultant-info/pricing.css";
 import { prices } from "./database-temp";
+import { Link } from "react-router-dom";
 
 // head_icon - uil uil-bag
 function PriceBox({heading, description, items, price, head_icon, informations }) {
+
+  useEffect(() => {
+    const links = document.querySelectorAll('.submit');
+    links.forEach((link) => link.addEventListener('click', () => window.scrollTo(0, 0)));
+  }, [])
   return (
     <div className="pricing__body__box">
       <div className="pricing__body__box--head">
@@ -31,7 +37,7 @@ function PriceBox({heading, description, items, price, head_icon, informations }
       </div>
 
       <div className="pricing__body__box--foot">
-        <button className="submit">Buy Now</button>
+        <Link to="/search" className="submit">Buy Now</Link>
         <ul className="information">
           {informations.map((info, index) => <li key={index} className="information--warning">{info}</li>)}
         </ul>

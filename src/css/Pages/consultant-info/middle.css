@@ -111,6 +111,8 @@ a {
         color: #e91e63;
         text-shadow: 1px 1px 4px #fff; }
     .middle__banner__info--register {
+      display: block;
+      width: fit-content;
       margin-top: 3rem;
       font-size: 25px;
       background: #005e86;

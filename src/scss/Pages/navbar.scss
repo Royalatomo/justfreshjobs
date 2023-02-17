@@ -112,7 +112,7 @@
   font-size: 16px;
   font-weight: 500;
   color: $dark-gray;
-  
+
   margin-left: auto;
   margin-right: 4rem;
 
@@ -134,7 +134,8 @@
       transition: transform 0.2s linear;
     }
 
-    &:hover, &.active {
+    &:hover,
+    &.active {
       background: lighten($primary-color, 47%);
       color: $primary-color;
     }
@@ -154,7 +155,7 @@
   align-items: center;
   justify-content: center;
 
-  button {
+  &--login, &--register {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +166,7 @@
     font-size: 15px;
   }
 
-  .navbar__buttons--login {
+  &--login {
     border: 2px solid $primary-color;
     color: $primary-color;
     padding: 7px 20px;
@@ -177,7 +178,7 @@
     }
   }
 
-  .navbar__buttons--register {
+  &--register {
     border: 2px solid $primary-color;
     background: $primary-color;
     color: $secondary-color;
@@ -213,6 +214,7 @@
     &-option {
       padding: 10px 15px;
       min-width: max-content;
+      display: block;
 
       &:hover {
         background: lighten($primary-color, 47%);

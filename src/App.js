@@ -8,8 +8,10 @@ import TermsCondition from "./Pages/terms-condition/Main";
 import Searching from "./Pages/searching/Main";
 import Navbar from "./Pages/Navbar";
 import Footer from "./Pages/Footer";
+import { useEffect } from "react";
 
 function App() {
+
   return (
     <>
       <Navbar />

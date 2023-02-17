@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../css/Pages/consultant-info/middle.css";
+import { Link } from "react-router-dom";
 
 function DetailsContainer({ position="right", heading, desc, img }) {
   let information = (
@@ -21,6 +22,11 @@ function DetailsContainer({ position="right", heading, desc, img }) {
 }
 
 function Middle() {
+
+  useEffect(() => {
+    const btn = document.querySelector('.middle__banner__info--register');
+    btn.addEventListener('click', () => window.scrollTo(0, 0));
+  }, [])
   return (
     <section className="middle">
       <div className="middle__banner">
@@ -40,7 +46,7 @@ function Middle() {
             Hire interns, freshers & experienced professionals.{" "}
             <span>For Absolutely FREE</span>
           </p>
-          <button className="middle__banner__info--register">Join Now</button>
+          <Link to="/register" className="middle__banner__info--register">Join Now</Link>
         </div>
       </div>
 

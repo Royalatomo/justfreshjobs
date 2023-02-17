@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../css/Pages/searching/card.css";
+import { Link } from "react-router-dom";
 
 function Card() {
+
+  useEffect(() => {
+    const btns = document.querySelectorAll(".foot-btn");
+    btns.forEach( btn => 
+      btn.addEventListener("click", () => window.scrollTo(0, 0))
+    )
+  });
+
   return (
     <div className="card">
       <div className="card__head">
@@ -63,8 +72,8 @@ function Card() {
         <div className="card__foot--time">5 hrs ago</div>
         
         <div className="card__foot__buttons">
-          <div className="card__foot__buttons--detail foot-btn">Learn More</div>
-          <div className="card__foot__buttons--apply foot-btn">Apply Now</div>
+          <Link to="/login" className="card__foot__buttons--detail foot-btn">Learn More</Link>
+          <Link to="/login" className="card__foot__buttons--apply foot-btn">Apply Now</Link>
         </div>
       </div>
     </div>

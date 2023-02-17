@@ -71,7 +71,7 @@ body {
   color: darken($light-green, 5%);
 }
 .red {
-  color: $red;
+  color: $red !important;
 }
 
 .font-heading {

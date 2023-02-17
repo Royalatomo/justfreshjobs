@@ -1,25 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../../css/Pages/contact-us/box.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const RECAPTCHA_KEY = process.env.REACT_APP_RECAPTCHA_CLIENT_KEY
+const BACKEND = process.env.REACT_APP_BACKEND_SERVER;
 
 
-function Message({toggle}) {
+function Message({changeState, success}) {
 
   useEffect(() => window.scrollTo(0, 0), [])
 
   return <div className="success">
-    <h1>Message Send Successfully</h1>
-    <p>Thanks for reaching out to us. We will soon get back to you (^_^)</p>
-    <img src="/assets/gifs/success.gif" alt="success" />
-    <button onClick={toggle}>Go Back</button>
+    {success?<h1>Message Send Successfully</h1>:<h1 className="red">Message Not Sent</h1>}
+    {success?<p>Thanks for reaching out to us. We will soon get back to you (^_^)</p>:<p>Information provided is invalid, please fill carefully</p>}
+    <img style={{"objectFit": success?"cover":"contain"}} src={`/assets/gifs/${success?"success":"wrong"}.gif`} alt="success" />
+    <button onClick={() => changeState(false)}>Go Back</button>
   </div>
 }
 
-function BoxContent( {toggle} ) {
+function BoxContent( {changeState} ) {
 
   const [disabled, setDisabled] = useState(true);
+  const captchaValue = useRef(null);
+
+  const contactAPI = async (email, message, first_name, last_name, phone) => {
+    const responce = await fetch(BACKEND + "/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, message, first_name, last_name, phone, recaptcha: captchaValue.current }),
+    });
+    const data = await responce.json();
+  
+    if(data.code > 0) {
+      changeState(false);
+      return;
+    }
+
+    return changeState(true);
+  }
 
   useEffect(() => {
     const inputs = document.querySelectorAll("input");
@@ -48,19 +69,20 @@ function BoxContent( {toggle} ) {
     const last = document.querySelector("#last")?.value;
     const email = document.querySelector("#email")?.value;
     const phone = document.querySelector("#phone")?.value;
-    const query = document.querySelector("#query")?.value;
+    const msg = document.querySelector("#query")?.value;
 
-    if (first && last && email &&  phone && query) {
+    if (first && last && email &&  phone && msg) {
       if (disabled) {
         document.querySelector("#error").innerHTML = "Please fill the recaptcha";
       }else {
-        toggle();
+        contactAPI(email, msg, first, last, phone);
       }
     }
   }
 
-  function captcha() {
+  function captcha(value) {
     setDisabled(false);
+    captchaValue.current = value
   }
 
   return (
@@ -97,14 +119,17 @@ function BoxContent( {toggle} ) {
 
 function Box() {
   const [submited, setSubmited] = useState(false);
+  const showSuccess = useRef(false);
 
-  function toggleSubmit() {
-    setSubmited(!submited);
+  function changeState(success) {
+    if(!success) showSuccess.current = false;
+    else showSuccess.current = true
+    setSubmited((prv) => !prv);
   }
 
   return (
     <section className="contact">
-      {(!submited)?<BoxContent toggle={toggleSubmit} />:<Message toggle={toggleSubmit} />}
+      {(!submited)?<BoxContent changeState={changeState} />:<Message success={showSuccess.current} changeState={changeState} />}
       <div className="contact__img">
         <img src="/assets/contact_us.jpg" alt="" />
       </div>

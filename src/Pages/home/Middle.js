@@ -4,6 +4,8 @@ import {internship_cities} from "./categories-db";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import CompaniesCarousel from "../consultant-info/Companies";
 
 const sliderOptions = {
   dots: true,
@@ -41,10 +43,10 @@ function Categories({title, categories}) {
       <h3>{title}</h3>
       <Slider {...sliderOptions} slidesToShow={result} slidesToScroll={result} className="container__categories">
         {categories.map((cat, i) => {
-          return <div key={i} className="container__categories--option">
+          return <Link onClick={() => window.scrollTo(0, 0)} to="/search" key={i} className="container__categories--option">
             <img src={cat.img} alt="option" />
             <p>{cat.name}</p>
-          </div>})}
+          </Link>})}
       </Slider>
     </div>
   )
@@ -68,7 +70,7 @@ function Middle() {
           <i className="uil uil-map-marker"></i>
           <input type="text" placeholder="Enter location" className="details__searchbox--location" />
         </div>
-        <button className="details__searchbox--search">Search</button>
+        <Link to="/search" onClick={() => window.scrollTo(0, 0)}  className="details__searchbox--search">Search</Link>
       </div>
 
       <div className="internship cat-container">
@@ -79,7 +81,7 @@ function Middle() {
           </span>
 
           <span className="cat-container__header--link">
-            <p>View all internships</p>
+            <Link to="/search">View all internships</Link>
             <i className="uil uil-arrow-right"></i>
           </span>
         </div>
@@ -87,6 +89,8 @@ function Middle() {
         <Categories title={"Popular cities"} categories={internship_cities} />
         <Categories title={"Popular cities"} categories={internship_cities} />
       </div>
+
+      <CompaniesCarousel />
 
       <div className="job cat-container">
         <div className="cat-container__header">
@@ -96,7 +100,7 @@ function Middle() {
           </span>
 
           <span className="cat-container__header--link">
-            <p>View all jobs</p>
+            <Link to="/search">View all jobs</Link>
             <i className="uil uil-arrow-right"></i>
           </span>
         </div>

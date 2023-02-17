@@ -4,6 +4,7 @@ import "../css/Pages/navbar.css";
 
 // section (A) page links - about site
 const hamburger_pages = [
+  { name: "Home", link: "/" },
   { name: "internships", link: "/search" },
   { name: "jobs", link: "/search" },
   { name: "Consultants", link: "/Consultant" },
@@ -39,6 +40,14 @@ function Navbar() {
     const navLinks = document.querySelectorAll(".navbar__links--link");
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
+        window.scrollTo(0, 0);
+      });
+    });
+
+    const hamburgerLinks = document.querySelectorAll(".navbar__hamburger__menu--link");
+    hamburgerLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.querySelector(".navbar__hamburger").classList.toggle("active");
         window.scrollTo(0, 0);
       });
     });

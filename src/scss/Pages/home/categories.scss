@@ -50,6 +50,10 @@
     padding: 0 10px;
     cursor: pointer;
 
+    a {
+      color: $primary-color;
+    }
+
     i {
       margin-left: 8px;
       font-size: 30px;

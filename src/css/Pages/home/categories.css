@@ -31,7 +31,7 @@ body {
   color: #00dd12; }
 
 .red {
-  color: #cf0300; }
+  color: #cf0300 !important; }
 
 .font-heading {
   font-size: 40px;
@@ -109,7 +109,7 @@ a {
     .container-area .fields-container img {
       width: 100%;
       height: 350px;
-      object-fit: cover; }
+      object-fit: contain; }
     .container-area .fields-container .success-msg--notification {
       font-size: 21px;
       color: green;
@@ -205,6 +205,8 @@ a {
     color: #00a5ec;
     padding: 0 10px;
     cursor: pointer; }
+    .cat-container__header--link a {
+      color: #00a5ec; }
     .cat-container__header--link i {
       margin-left: 8px;
       font-size: 30px; }

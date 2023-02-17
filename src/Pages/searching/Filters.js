@@ -119,6 +119,15 @@ function Filters() {
         selectionBox.classList.add('visible');
       })
     })
+
+    const closeBtn = document.querySelector(".filters .close-icon");
+    closeBtn.addEventListener("click", () => {
+      const searchContainer = document.querySelector(".searching-container");
+      searchContainer.classList.remove("disable-scroll");
+
+      const filters = document.querySelector(".filters");
+      filters.classList.remove('active');
+    })
   }, [])
 
 
@@ -126,6 +135,7 @@ function Filters() {
     <div className="filters">
       <h4 className="filters__heading">
         <i className="uil uil-filter"></i> Filters
+        <i className="uil uil-multiply close-icon"></i>
       </h4>
       <div className="filters__choice category">
         <p className="filters__choice--heading">Category</p>

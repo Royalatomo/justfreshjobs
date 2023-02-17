@@ -11,6 +11,10 @@
   &:hover {
     box-shadow: 0 0 5px lighten($dark-gray, 10%);
   }
+
+  @media screen and (max-width: 620px) {
+    padding: 1rem;
+  }
 }
 
 .card__head {
@@ -27,6 +31,9 @@
     border: 1px solid $light-gray;
     border-radius: 6px;
     margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
 
     i {
       font-size: 19px;
@@ -52,6 +59,20 @@
       background: $dark-white;
     }
   }
+
+  @media screen and (max-width: 520px) {
+    .card__info-banner--text {
+      font-size: 13px;
+    }
+
+    &--save {
+      font-size: 14px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .card__company-info {
@@ -70,9 +91,26 @@
     margin-top: 0.4rem;
   }
 
-  &__logo img {
-    height: 100%;
-    object-fit: contain;
+  &__logo {
+    display: flex;
+    margin-left: 1rem;
+    width: 100%;
+    max-width: fit-content;
+    justify-content: flex-end;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      max-width: 90px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    &__text--post,
+    &__text--comp-name {
+      font-size: 15px;
+    }
   }
 }
 
@@ -82,7 +120,6 @@
   line-height: 1.5;
 
   &__item {
-    min-width: max-content;
     margin-right: 1rem;
     margin-top: 1rem;
     color: $dark-blue;
@@ -91,11 +128,18 @@
       margin-right: 0.4rem;
     }
   }
+
+  @media screen and (max-width: 520px) {
+    &__item {
+      font-size: 15px;
+    }
+  }
 }
 
 .card__tags {
   margin-top: 1.5rem;
   display: flex;
+  line-height: 1.7;
   align-items: center;
   flex-wrap: wrap;
   font-size: 14px;
@@ -108,6 +152,10 @@
     margin: 0 0.5rem;
     background: darken($light-gray, 20%);
   }
+
+  @media screen and (max-width: 520px) {
+    font-size: 13px;
+  }
 }
 
 .card__foot {
@@ -116,6 +164,11 @@
   justify-content: space-between;
   font-size: 16px;
   color: $dark-gray;
+  align-items: center;
+
+  * {
+    min-width: max-content;
+  }
 
   .foot-btn {
     border: 2px solid $secondary-color;
@@ -143,6 +196,20 @@
       border-color: $primary-color;
       color: $secondary-color;
       background-color: $primary-color;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__buttons {
+      align-self: center;
+      margin-top: 1rem;
     }
   }
 }

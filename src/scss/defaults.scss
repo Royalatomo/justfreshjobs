@@ -10,10 +10,6 @@
   -webkit-touch-callout: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 input {
   border: none;
 
@@ -131,4 +127,9 @@ ul.font-text {
 
 li {
   text-align: -webkit-match-parent;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-gray;
 }

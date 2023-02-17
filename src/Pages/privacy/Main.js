@@ -1,12 +1,9 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 import "../../css/defaults.css"
 
 function Main() {
   return (
     <>
-      <Navbar />
       <div className="privacy-container">
         <h1 className="font-heading">Privacy Policy</h1>
         <p className="font-text">At justfreshjobs.com, accessible from https://justfreshjobs.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by justfreshjobs.com and how we use it.</p>
@@ -76,7 +73,6 @@ function Main() {
         <h2 className="font-subheading">Contact Us</h2>
         <p className="font-text margin-btm">If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
       </div>
-      <Footer />
     </>
   )
 }

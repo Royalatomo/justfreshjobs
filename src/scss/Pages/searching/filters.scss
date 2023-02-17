@@ -1,13 +1,13 @@
 @import "../../defaults.scss";
 
 .filters {
-  width: 400px;
+  min-width: 420px;
   margin-right: 4rem;
-  background: white;
+  background: $secondary-color;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0px 0px 2px #ababab;
-  border: #ababab;
+  box-shadow: 0px 0px 2px $light-gray;
+  border: $light-gray;
   position: sticky;
   top: 8rem;
   height: 80vh;
@@ -18,12 +18,46 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: $secondary-color;
   }
 
   &::-webkit-scrollbar-thumb {
     background: darken($dark-white, 10%);
     border-radius: 0 0 20px 20px;
+  }
+
+  .close-icon {
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    top: -10px;
+    color: $secondary-color;
+    background: $primary-color;
+    padding: 4px 10px;
+    border-radius: 20rem;
+  }
+
+  @media screen and (max-width: 1210px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    display: none;
+    padding: 2rem 1rem;
+
+    &.active {
+      display: block;
+    }
+
+    .close-icon {
+      display: inline-block;
+      margin-left: auto;
+    }
+
+    min-width: unset;
   }
 }
 
@@ -31,7 +65,8 @@
   text-align: center;
   font-size: 20px;
   font-weight: 500;
-  color: #3a3a3a;
+  color: $dark-blue;
+  position: relative;
 
   i {
     margin-left: 10px;
@@ -48,7 +83,7 @@
 
   &--heading {
     font-weight: 500;
-    color: #343434;
+    color: $dark-blue;
   }
 }
 
@@ -56,20 +91,20 @@
   display: flex;
   list-style: none;
   margin-top: 0.5rem;
-  border: 1px solid #c3c3c3;
+  border: 1px solid $light-gray;
   padding: 10px 10px;
   position: relative;
   flex-wrap: wrap;
 
   &.active {
-    border-color: #03a9f4;
+    border-color: $primary-color;
   }
 
   &--field {
     display: flex;
     min-width: max-content;
-    background: #03a9f4;
-    color: white;
+    background: $primary-color;
+    color: $secondary-color;
     padding: 3px 5px;
     border-radius: 5px;
     margin: 0.5rem 0.2rem;
@@ -95,8 +130,8 @@
     width: 100%;
     top: 100%;
     left: 0;
-    background: #e1f6ff;
-    border: 1px solid #2196f3;
+    background: lighten($primary-color, 50%);
+    border: 1px solid $primary-color;
     max-height: 200px;
     overflow-y: scroll;
     z-index: 2;
@@ -109,7 +144,7 @@
     .result {
       font-size: 16px;
       padding: 5px 15px;
-      border-bottom: 1px solid #2196f3;
+      border-bottom: 1px solid $primary-color;
       cursor: pointer;
       transition: $smooth-tran;
 
@@ -118,11 +153,11 @@
       }
 
       &.disable {
-        background: #c1c1c1;
+        background: $light-gray;
         cursor: default;
 
         &:hover {
-          background-color: #c1c1c1;
+          background-color: $light-gray;
         }
       }
     }
@@ -132,7 +167,7 @@
     }
 
     &::-webkit-scrollbar-track {
-      background: #eeeeee;
+      background: $dark-white;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -156,7 +191,7 @@
   label {
     font-size: 15px;
     font-weight: 500;
-    color: #4c4c4c;
+    color: $dark-gray;
     text-transform: capitalize;
   }
 }
@@ -166,16 +201,16 @@
 
   &--text {
     font-weight: 500;
-    color: #343434;
+    color: $dark-gray;
     display: flex;
     align-items: center;
     margin-top: 1rem;
 
     span {
-      background: #4c4c4c;
+      background: $dark-gray;
       margin-left: 0.8rem;
       padding: 2px 10px;
-      color: white;
+      color: $secondary-color;
     }
   }
 
@@ -183,7 +218,7 @@
     width: 100%;
     -webkit-appearance: none;
     height: 7px;
-    background: #d4d4d4;
+    background: lighten($light-gray, 5%);
     border-radius: 5px;
     background-image: linear-gradient($primary-color, $primary-color);
     background-repeat: no-repeat;
@@ -195,7 +230,7 @@
       border-radius: 50%;
       background: $primary-color;
       cursor: pointer;
-      box-shadow: 0 0 2px 0 #555;
+      box-shadow: 0 0 2px 0 $dark-gray;
       transition: background 0.3s ease-in-out;
     }
 

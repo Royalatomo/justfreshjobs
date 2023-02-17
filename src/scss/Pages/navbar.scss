@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   z-index: 5;
-  background: white;
+  background: $secondary-color;
 }
 
 .navbar .holder {
@@ -52,10 +52,12 @@
     max-width: 90vw;
     height: 100vh;
     z-index: 10;
-    background: white;
+    background: $secondary-color;
     padding: 2rem 0;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     transition: $smooth-tran;
+    display: flex;
+    flex-direction: column;
 
     &--link {
       padding: 0.5rem 2rem;
@@ -110,7 +112,7 @@
   font-size: 16px;
   font-weight: 500;
   color: $dark-gray;
-
+  
   margin-left: auto;
   margin-right: 4rem;
 
@@ -123,6 +125,7 @@
     transition: $smooth-tran;
     min-width: fit-content;
     margin: 0 10px;
+    color: $dark-gray;
 
     i {
       font-weight: 900;
@@ -177,7 +180,7 @@
   .navbar__buttons--register {
     border: 2px solid $primary-color;
     background: $primary-color;
-    color: white;
+    color: $secondary-color;
     padding: 0px 15px 1px 20px;
     position: relative;
 
@@ -190,7 +193,7 @@
     }
 
     &-menu {
-      background: white;
+      background: $secondary-color;
       opacity: 0;
       position: absolute;
       bottom: calc(-100% + -4rem);

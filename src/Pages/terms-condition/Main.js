@@ -1,12 +1,9 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 import "../../css/defaults.css"
 
 function Main() {
   return (
     <>
-      <Navbar />
       <div className="privacy-container">
         <h1 className="font-heading">Terms and Conditions</h1>
         <p className="font-text">These terms and conditions outline the rules and regulations for the use of JustFreshJobs's Website, located at https://justfreshjobs.com.</p>
@@ -98,7 +95,6 @@ function Main() {
         <p className="font-text">The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
         <p className="font-text margin-btm">As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
       </div>
-      <Footer />
     </>
   )
 }

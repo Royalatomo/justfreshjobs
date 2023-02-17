@@ -1,28 +1,29 @@
 import React, { useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "../css/Pages/navbar.css";
 
 // section (A) page links - about site
 const hamburger_pages = [
-  { name: "internships", link: "" },
-  { name: "jobs", link: "" },
-  { name: "consultants", link: "" },
-  { name: "contact us", link: "" },
+  { name: "internships", link: "/search" },
+  { name: "jobs", link: "/search" },
+  { name: "Consultants", link: "/Consultant" },
+  { name: "contact us", link: "/contact-us" },
 ]
 
 // section (B) page links - user login/register
 const hamburger_user = [
-  { name: "register - as job seeker", link: "" },
-  { name: "register - as consultant", link: "" },
-  { name: "login", link: "" },
+  { name: "register - as job seeker", link: "/register" },
+  { name: "register - as consultant", link: "/register" },
+  { name: "login", link: "/login" },
 ]
 
 // section (B) page links - user login/register
 const register_options = [
-  { name: "As a student", link: "" },
-  { name: "As a consultant", link: "" }
+  { name: "As a student", link: "/register" },
+  { name: "As a consultant", link: "/register" }
 ]
 
-function Navbar({activate=""}) {
+function Navbar() {
 
   useEffect(() => {
     const hamburger = document.querySelector(".navbar__hamburger i");
@@ -34,6 +35,13 @@ function Navbar({activate=""}) {
     black_screen.addEventListener("click", () => {
       document.querySelector(".navbar__hamburger").classList.remove("active");
     })
+
+    const navLinks = document.querySelectorAll(".navbar__links--link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        window.scrollTo(0, 0);
+      });
+    });
   }, [])
 
   return (
@@ -44,11 +52,11 @@ function Navbar({activate=""}) {
           <div className="black-screen"></div>
           <div className="navbar__hamburger__menu">
             {hamburger_pages.map((page, i) => {
-              return <li key={i} className="navbar__hamburger__menu--link">{page.name}</li>
+              return <Link to={page.link} key={i} className="navbar__hamburger__menu--link">{page.name}</Link>
             })}
             <hr />
             {hamburger_user.map((page, i) => {
-              return <li key={i} className="navbar__hamburger__menu--link">{page.name}</li>
+              return <Link to={page.link} key={i} className="navbar__hamburger__menu--link">{page.name}</Link>
             })}
           </div>
         </span>
@@ -58,10 +66,10 @@ function Navbar({activate=""}) {
         </span>
 
         <span className="navbar__links">
-          <li to="/" className={"navbar__links--link " + (activate==="jobs"?"active":"")}>Jobs</li>
-          <li to="/" className={"navbar__links--link space " + (activate==="internships"?"active":"")}>Internships</li>
-          <li to="/" className={"navbar__links--link " + (activate==="consultants"?"active":"")}>Consultants</li>
-          <li to="/" className={"navbar__links--link " + (activate==="contact"?"active":"")}>Contact Us</li>
+          <Link to="/search" className="navbar__links--link">Jobs</Link>
+          <Link to="/search" className="navbar__links--link">Internships</Link>
+          <Link to="/consultant" className="navbar__links--link">Consultants</Link>
+          <Link to="/contact-us" className="navbar__links--link">Contact Us</Link>
         </span>
 
         <span className="navbar__buttons">

@@ -2,6 +2,34 @@
 
 .searching-container {
   padding: 4rem 5rem;
-  background: #f8f8f8;
+  background: $dark-white;
   display: flex;
+
+  @media screen and (max-width: 1210px) {
+    flex-direction: column;
+
+    &.disable-scroll {
+      height: 1vh;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    padding: 2rem 1rem;
+  }
+
+  .filters-mob {
+    display: none;
+    background-color: $secondary-color;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    border-radius: 7px;
+    padding: 7px 15px;
+    box-shadow: 0 0 3px lighten($dark-gray, 20%);
+
+    @media screen and (max-width: 1210px) {
+      display: block;
+    }
+  }
 }

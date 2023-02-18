@@ -37,7 +37,7 @@ function PriceBox({heading, description, items, price, head_icon, informations }
       </div>
 
       <div className="pricing__body__box--foot">
-        <Link to="/search" className="submit">Buy Now</Link>
+        <Link to="/login" className="submit">Buy Now</Link>
         <ul className="information">
           {informations.map((info, index) => <li key={index} className="information--warning">{info}</li>)}
         </ul>

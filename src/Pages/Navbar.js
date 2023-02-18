@@ -71,7 +71,7 @@ function Navbar() {
         </span>
 
         <span className="navbar__logo">
-          <Link to="/">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <img src="https://internshala.com/static/images/common/new_internshala_logo.svg" alt="Logo" /> 
           </Link>
         </span>

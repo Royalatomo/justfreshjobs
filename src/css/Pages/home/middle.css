@@ -497,7 +497,9 @@ a {
         margin: 1rem 0; }
       .details__searchbox .details__searchbox--search {
         width: 100%;
-        margin-top: 15px; } }
+        margin-top: 15px;
+        display: inline-block;
+        text-align: center; } }
   @media screen and (max-width: 460px) {
     .details__searchbox i {
       margin-left: 1rem; }
